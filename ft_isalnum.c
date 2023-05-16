@@ -6,7 +6,7 @@
 /*   By: shmorish <shmorish@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/05/16 16:18:02 by shmorish          #+#    #+#             */
-/*   Updated: 2023/05/16 16:24:02 by shmorish         ###   ########.fr       */
+/*   Updated: 2023/05/16 19:51:56 by shmorish         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,7 +14,7 @@
 
 int	ft_isalnum(int c)
 {
-	if ((ft_isalnum(c) == 1) && (ft_isdigit(c) == 1))
+	if ((ft_isalpha(c) == 1) && (ft_isdigit(c) == 1))
 		return (1);
 	else
 		return (0);

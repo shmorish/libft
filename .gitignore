@@ -1,4 +1,5 @@
 libft.a
 .vscode
 .DS_Store
+*.o
 build/Debug
