@@ -6,7 +6,7 @@
 /*   By: shmorish <shmorish@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/05/16 17:35:49 by shmorish          #+#    #+#             */
-/*   Updated: 2023/05/16 17:59:07 by shmorish         ###   ########.fr       */
+/*   Updated: 2023/05/16 18:40:13 by shmorish         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,8 +19,6 @@ void	*ft_memcpy(void *dst, const void *src, size_t n)
 	unsigned int	i;
 
 	i = 0;
-	if (!dst || !src)
-		return (0);
 	while (i < n)
 	{
 		((unsigned char *)dst)[i] = ((unsigned char *)src)[i];
