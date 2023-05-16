@@ -6,7 +6,7 @@
 /*   By: shmorish <shmorish@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/05/16 16:06:26 by shmorish          #+#    #+#             */
-/*   Updated: 2023/05/16 21:44:22 by shmorish         ###   ########.fr       */
+/*   Updated: 2023/05/16 21:51:16 by shmorish         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -31,5 +31,6 @@ int		tolower(int c);
 char	*strchr(const char *s, int c);
 char	*strrchr(const char *s, int c);
 int		strncmp(const char *s1, const char *s2, size_t n);
+void	*memchr(const void *s, int c, size_t n);
 
 #endif
