@@ -1,5 +1,13 @@
-libft.a
-.vscode
+## Mac OS X
 .DS_Store
+
+## Debug files
+build/
+
+## vscode
+.vscode
+
+## others
+libft.a
 *.o
-build/Debug
+*.swp
