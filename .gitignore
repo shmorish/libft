@@ -9,5 +9,6 @@ build/
 
 ## others
 libft.a
+a.out
 *.o
 *.swp
