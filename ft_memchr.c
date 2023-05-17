@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_memchr.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: shmorish <shmorish@student.42.fr>          +#+  +:+       +#+        */
+/*   By: morishitashoto <morishitashoto@student.    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/05/16 17:35:49 by shmorish          #+#    #+#             */
-/*   Updated: 2023/05/16 22:00:17 by shmorish         ###   ########.fr       */
+/*   Updated: 2023/05/17 16:42:50 by morishitash      ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,7 +21,7 @@ void	*memchr(const void *s, int c, size_t n)
 	tmp = (unsigned char *)s;
 	while (n > 0)
 	{
-		if (tmp == c)
+		if (*tmp == (unsigned char)c)
 			return (tmp);
 		tmp++;
 		n--;

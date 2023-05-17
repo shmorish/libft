@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_strrchr.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: shmorish <shmorish@student.42.fr>          +#+  +:+       +#+        */
+/*   By: morishitashoto <morishitashoto@student.    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/05/16 21:38:59 by shmorish          #+#    #+#             */
-/*   Updated: 2023/05/16 21:42:52 by shmorish         ###   ########.fr       */
+/*   Updated: 2023/05/17 13:12:40 by morishitash      ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,7 +20,7 @@ char	*strrchr(const char *s, int c)
 	while (*s == '\0')
 	{
 		if (*s == c)
-			tmp = s;
+			tmp = (char *)s;
 		s++;
 	}
 	return (tmp);
