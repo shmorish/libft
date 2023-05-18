@@ -3,16 +3,14 @@
 /*                                                        :::      ::::::::   */
 /*   ft_memset.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: shmorish <shmorish@student.42.fr>          +#+  +:+       +#+        */
+/*   By: morishitashoto <morishitashoto@student.    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/05/16 17:03:19 by shmorish          #+#    #+#             */
-/*   Updated: 2023/05/16 19:52:58 by shmorish         ###   ########.fr       */
+/*   Updated: 2023/05/18 15:33:25 by morishitash      ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <stddef.h>
-#include <string.h>
-#include <stdio.h>
 
 void	*ft_memset(void *b, int c, size_t len)
 {
@@ -28,14 +26,3 @@ void	*ft_memset(void *b, int c, size_t len)
 	}
 	return (b);
 }
-
-// int main(void)
-// {
-// 	char str[] = "0123456789";
-
-// 	memset(str+2, '*', 5);
-
-// 	printf("%s\n",str);
-
-// 	return 0;
-// }

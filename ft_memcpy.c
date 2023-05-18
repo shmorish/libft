@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_memcpy.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: shmorish <shmorish@student.42.fr>          +#+  +:+       +#+        */
+/*   By: morishitashoto <morishitashoto@student.    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/05/16 17:35:49 by shmorish          #+#    #+#             */
-/*   Updated: 2023/05/16 18:40:13 by shmorish         ###   ########.fr       */
+/*   Updated: 2023/05/18 15:33:27 by morishitash      ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -26,22 +26,3 @@ void	*ft_memcpy(void *dst, const void *src, size_t n)
 	}
 	return (dst);
 }
-
-// int	main(void)
-// {
-// 	char str1[128] = {1,1,1,1,1,1,1};
-// 	char str2[] = "ab\0cde";        /* 途中に空文字のある文字列 */
-// 	int i;
-// 	printf("コピー前　中身の確認\n");
-// 	for (i=0; i<7; i++)
-// 		printf("%#x ",str1[i]);
-// 	printf("\n");
-// 	ft_memcpy(str1, str2, 5);
-
-// 	printf("コピー後　中身の確認\n");
-// 	for (i=0; i<7; i++)
-// 		printf("%#x ",str1[i]);
-// 	printf("\n");
-
-// 	return 0;
-// }
