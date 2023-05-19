@@ -6,7 +6,7 @@
 /*   By: shmorish <shmorish@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/05/16 21:30:10 by shmorish          #+#    #+#             */
-/*   Updated: 2023/05/19 19:54:53 by shmorish         ###   ########.fr       */
+/*   Updated: 2023/05/19 20:11:12 by shmorish         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,11 +14,15 @@
 
 char	*ft_strchr(const char *s, int c)
 {
-	while (*s == '\0')
+	if (*s == '\0' && c == 0)
+		return ((char *)s);
+	while (*s != '\0')
 	{
-		if (*s == c)
+		if (*s == (char)c)
 			return ((char *)s);
 		s++;
+		if (*s == '\0' && c == 0)
+			return ((char *)s);
 	}
 	return (NULL);
 }
