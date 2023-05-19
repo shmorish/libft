@@ -6,7 +6,7 @@
 /*   By: shmorish <shmorish@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/05/17 22:03:19 by morishitash       #+#    #+#             */
-/*   Updated: 2023/05/19 18:52:22 by shmorish         ###   ########.fr       */
+/*   Updated: 2023/05/19 20:55:34 by shmorish         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -37,16 +37,3 @@ char	*ft_strnstr(const char *haystack, const char *needle, size_t len)
 	}
 	return (NULL);
 }
-
-// int main()
-// {
-// 	const char* haystack = "Hello, world!";
-// 	const char* needle = "world";
-
-// 	char* result = ft_strnstr(haystack, needle, strlen(haystack));
-// 	if (result != NULL)
-// 		printf("Found at position: %ld\n", result - haystack);
-// 	else
-// 		printf("Not found\n");
-// 	return 0;
-// }
