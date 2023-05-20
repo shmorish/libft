@@ -3,24 +3,27 @@
 /*                                                        :::      ::::::::   */
 /*   ft_atoi.c                                          :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: shmorish <shmorish@student.42.fr>          +#+  +:+       +#+        */
+/*   By: morishitashoto <morishitashoto@student.    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/05/17 10:25:57 by morishitash       #+#    #+#             */
-/*   Updated: 2023/05/21 02:27:40 by shmorish         ###   ########.fr       */
+/*   Updated: 2023/05/21 03:17:03 by morishitash      ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <limits.h>
 #include <stddef.h>
 #include <stdio.h>
+#include <stdlib.h>
 
-int	check_overflow(int num, char str, int minus)
+static long	check_overflow(int num, char str, int minus)
 {
-	int ov_div;
-	int ov_mod;
+	long ov_div;
+	long ov_mod;
 
 	ov_div = LONG_MAX / 10;
 	ov_mod = LONG_MAX % 10;
+	if (minus == -1)
+		ov_mod += 1; 
 	if ((num > ov_div) || ((num == ov_div) && (ov_mod < (str - '0'))))
 	{
 		if (minus == 1)
@@ -51,18 +54,21 @@ int	ft_atoi(const char *str)
 	}
 	while (str[i] && '0' <= str[i] && str[i] <= '9')
 	{
-		if (result == check_overflow(result, str[i], minus))
-		{
-			result *= 10;
-			result += str[i] - '0';
-			i++;
-		}
+		if (check_overflow(result, str[i], minus) == LONG_MAX)
+			return ((int)LONG_MAX);
+		if (check_overflow(result, str[i], minus) == LONG_MIN)
+			return ((int)LONG_MIN);
+		result *= 10;
+		result += str[i] - '0';
+		i++;
 	}
 	return (result * minus);
 }
 
-// int main(void)
-// {
-// 	int a = ft_atoi("9223372036854775808");
-// 	printf("%d\n",a);
-// }
+int main(void)
+{
+	int a = ft_atoi("-9223372036854775809");
+	printf("%d\n",a);
+	a = atoi("-9223372036854775809");
+	printf("%d\n",a);
+}
