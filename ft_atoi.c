@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_atoi.c                                          :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: morishitashoto <morishitashoto@student.    +#+  +:+       +#+        */
+/*   By: shmorish <shmorish@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/05/17 10:25:57 by morishitash       #+#    #+#             */
-/*   Updated: 2023/05/20 02:18:21 by morishitash      ###   ########.fr       */
+/*   Updated: 2023/05/21 02:27:40 by shmorish         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,22 +14,27 @@
 #include <stddef.h>
 #include <stdio.h>
 
-static int	overflow(long long num)
+int	check_overflow(int num, char str, int minus)
 {
-	// printf("%lld\n", num);
-	// printf("-----------\n");
-	if (INT_MIN <= num && num <= INT_MAX)
-		return (num);
-	else if (INT_MIN > num)
-		return (-1);
-	else
-		return (0);
+	int ov_div;
+	int ov_mod;
+
+	ov_div = LONG_MAX / 10;
+	ov_mod = LONG_MAX % 10;
+	if ((num > ov_div) || ((num == ov_div) && (ov_mod < (str - '0'))))
+	{
+		if (minus == 1)
+			return (LONG_MAX);
+		else
+			return (LONG_MIN);
+	}
+	return (num);
 }
 
 int	ft_atoi(const char *str)
 {
 	int			minus;
-	long long	result;
+	int			result;
 	int			i;
 
 	result = 0;
@@ -46,13 +51,14 @@ int	ft_atoi(const char *str)
 	}
 	while (str[i] && '0' <= str[i] && str[i] <= '9')
 	{
-		result *= 10;
-		result += str[i] - '0';
-		i++;
-		// printf("%lld\n",result);
+		if (result == check_overflow(result, str[i], minus))
+		{
+			result *= 10;
+			result += str[i] - '0';
+			i++;
+		}
 	}
-	// printf("%lld\n",result);
-	return (overflow(result * minus));
+	return (result * minus);
 }
 
 // int main(void)
