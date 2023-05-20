@@ -6,7 +6,7 @@
 /*   By: morishitashoto <morishitashoto@student.    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/05/17 10:25:57 by morishitash       #+#    #+#             */
-/*   Updated: 2023/05/21 03:17:03 by morishitash      ###   ########.fr       */
+/*   Updated: 2023/05/21 03:56:51 by morishitash      ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,7 +15,7 @@
 #include <stdio.h>
 #include <stdlib.h>
 
-static long	check_overflow(int num, char str, int minus)
+static long	check_overflow(long num, char str, int minus)
 {
 	long ov_div;
 	long ov_mod;
@@ -37,7 +37,7 @@ static long	check_overflow(int num, char str, int minus)
 int	ft_atoi(const char *str)
 {
 	int			minus;
-	int			result;
+	long		result;
 	int			i;
 
 	result = 0;
@@ -56,19 +56,14 @@ int	ft_atoi(const char *str)
 	{
 		if (check_overflow(result, str[i], minus) == LONG_MAX)
 			return ((int)LONG_MAX);
-		if (check_overflow(result, str[i], minus) == LONG_MIN)
+		else if (check_overflow(result, str[i], minus) == LONG_MIN)
 			return ((int)LONG_MIN);
-		result *= 10;
-		result += str[i] - '0';
-		i++;
+		else
+		{
+			result *= 10;
+			result += str[i] - '0';
+			i++;
+		}
 	}
 	return (result * minus);
-}
-
-int main(void)
-{
-	int a = ft_atoi("-9223372036854775809");
-	printf("%d\n",a);
-	a = atoi("-9223372036854775809");
-	printf("%d\n",a);
 }
