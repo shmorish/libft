@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_strjoin.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: morishitashoto <morishitashoto@student.    +#+  +:+       +#+        */
+/*   By: shmorish <shmorish@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/05/20 12:06:35 by morishitash       #+#    #+#             */
-/*   Updated: 2023/05/20 12:08:37 by morishitash      ###   ########.fr       */
+/*   Updated: 2023/05/21 10:14:12 by shmorish         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
