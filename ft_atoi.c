@@ -3,27 +3,25 @@
 /*                                                        :::      ::::::::   */
 /*   ft_atoi.c                                          :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: morishitashoto <morishitashoto@student.    +#+  +:+       +#+        */
+/*   By: shmorish <shmorish@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/05/17 10:25:57 by morishitash       #+#    #+#             */
-/*   Updated: 2023/05/21 03:56:51 by morishitash      ###   ########.fr       */
+/*   Created: 2023/05/17 10:25:57 by shmorish          #+#    #+#             */
+/*   Updated: 2023/05/21 10:13:42 by shmorish         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <limits.h>
 #include <stddef.h>
-#include <stdio.h>
-#include <stdlib.h>
 
 static long	check_overflow(long num, char str, int minus)
 {
-	long ov_div;
-	long ov_mod;
+	long	ov_div;
+	long	ov_mod;
 
 	ov_div = LONG_MAX / 10;
 	ov_mod = LONG_MAX % 10;
 	if (minus == -1)
-		ov_mod += 1; 
+		ov_mod += 1;
 	if ((num > ov_div) || ((num == ov_div) && (ov_mod < (str - '0'))))
 	{
 		if (minus == 1)
@@ -36,9 +34,9 @@ static long	check_overflow(long num, char str, int minus)
 
 int	ft_atoi(const char *str)
 {
-	int			minus;
-	long		result;
-	int			i;
+	int		minus;
+	long	result;
+	int		i;
 
 	result = 0;
 	minus = 1;
@@ -46,10 +44,10 @@ int	ft_atoi(const char *str)
 	while (str[i] && (str[i] == '\f' || str[i] == '\t' || str[i] == ' '
 			|| str[i] == '\n' || str[i] == '\r' || str[i] == '\v'))
 		i++;
-	while (str[i] == '-' || str[i] == '+')
+	if (str[i] == '-' || str[i] == '+')
 	{
 		if (str[i] == '-')
-			minus *= -1;
+			minus = -1;
 		i++;
 	}
 	while (str[i] && '0' <= str[i] && str[i] <= '9')
@@ -58,12 +56,7 @@ int	ft_atoi(const char *str)
 			return ((int)LONG_MAX);
 		else if (check_overflow(result, str[i], minus) == LONG_MIN)
 			return ((int)LONG_MIN);
-		else
-		{
-			result *= 10;
-			result += str[i] - '0';
-			i++;
-		}
+		result = result * 10 + str[i++] - '0';
 	}
 	return (result * minus);
 }
