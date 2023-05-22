@@ -3,7 +3,11 @@
 
 ## Debug files
 build/
-libft-tester-tokyo
+
+## libft-tester
+libft-tester-tokyo/
+error.log
+result.log
 
 ## vscode
 .vscode
