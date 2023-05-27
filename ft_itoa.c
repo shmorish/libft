@@ -6,7 +6,7 @@
 /*   By: shmorish <shmorish@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/05/28 01:02:30 by shmorish          #+#    #+#             */
-/*   Updated: 2023/05/28 04:34:12 by shmorish         ###   ########.fr       */
+/*   Updated: 2023/05/28 04:53:28 by shmorish         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,38 +21,42 @@ static int	ft_abs(int n)
 	return (n);
 }
 
+static int	count_digits(int num)
+{
+	int	count;
+
+	count = 0;
+	if (num <= 0)
+		count++;
+	while (num != 0)
+	{
+		num /= 10;
+		count++;
+	}
+	return (count);
+}
+
 char	*ft_itoa(int n)
 {
 	int		len;
-	int		num;
 	char	*ret;
 
-	num = n;
-	len = 1;
-	if (n <= 0)
-		len++;
-	while (n /= 10)
-		len++;
+	len = count_digits(n);
 	ret = (char *)malloc(sizeof(char) * (len + 1));
 	if (!ret)
 		return (0);
-	if (num < 0)
+	if (n < 0)
 		ret[0] = '-';
-	if (num == 0)
-	{
+	else if (n == 0)
 		ret[0] = '0';
-		return (ret);
-	}
 	ret[len--] = '\0';
-	while (num != 0)
+	while (n != 0)
 	{
-		ret [len--] = ft_abs(num % 10) + '0';
-		num /= 10;
+		ret [len--] = ft_abs(n % 10) + '0';
+		n /= 10;
 	}
 	return (ret);
 }
-
-
 
 // int	main(void)
 // {
