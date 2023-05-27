@@ -6,7 +6,7 @@
 /*   By: shmorish <shmorish@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/05/28 04:56:15 by shmorish          #+#    #+#             */
-/*   Updated: 2023/05/28 05:03:29 by shmorish         ###   ########.fr       */
+/*   Updated: 2023/05/28 05:03:46 by shmorish         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -28,3 +28,20 @@ char	*ft_strmapi(const char *s, char (*f)(unsigned int, char))
 	}
 	return (ret);
 }
+
+// #include <stdio.h>
+
+// char f(unsigned int i, char c)
+// {
+// 	(void)i;
+// 	return c + 1;
+// }
+
+// int	main(void)
+// {
+// 	char *s = "123456";
+// 	printf("%s\n", s);
+
+// 	s = ft_strmapi(s, f);
+// 	printf("%s\n", s);
+// }
