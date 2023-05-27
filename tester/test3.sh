@@ -8,7 +8,6 @@ if [ ! -e libft-tester-tokyo ]; then
 fi
 cd libftTester
 make a
-mv error.log ..
 cd ..
 make clean
 if [ $# -eq 0 ]; then
