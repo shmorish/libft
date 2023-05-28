@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_strlcpy.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: morishitashoto <morishitashoto@student.    +#+  +:+       +#+        */
+/*   By: shmorish <shmorish@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/05/16 19:33:01 by shmorish          #+#    #+#             */
-/*   Updated: 2023/05/18 15:33:15 by morishitash      ###   ########.fr       */
+/*   Updated: 2023/05/28 10:10:33 by shmorish         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 

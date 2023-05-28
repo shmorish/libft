@@ -8,6 +8,7 @@ if [ ! -e libft-tester-tokyo ]; then
 fi
 cd libft-tester-tokyo
 make
+make bonus
 mv error.log ..
 cd ..
 make clean
