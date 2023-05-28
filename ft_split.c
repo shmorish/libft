@@ -6,13 +6,13 @@
 /*   By: shmorish <shmorish@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/05/25 15:45:32 by morishitash       #+#    #+#             */
-/*   Updated: 2023/05/28 14:16:01 by shmorish         ###   ########.fr       */
+/*   Updated: 2023/05/28 15:17:13 by shmorish         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <stdlib.h>
-#include <stdio.h>
 #include "libft.h"
+#include <stdio.h>
+#include <stdlib.h>
 
 static int	word_counter(const char *s, char c)
 {
@@ -45,7 +45,7 @@ static int	word_len(const char *s, char c)
 	return (i);
 }
 
-static void	*ft_free(char **array)
+static void	*free_arr(char **array)
 {
 	size_t	i;
 
@@ -59,17 +59,11 @@ static void	*ft_free(char **array)
 	return (NULL);
 }
 
-char	**ft_split(const char *s, char c)
+char	**append_arr(const char *s, char c, char **array)
 {
-	char	**array;
-	int		j;
-	int		k;
+	int	j;
+	int	k;
 
-	if (s == NULL)
-		return (NULL);
-	array = (char **)malloc(sizeof(char *) * (word_counter(s, c) + 1));
-	if (!array)
-		return (NULL);
 	j = 0;
 	while (*s != '\0')
 	{
@@ -79,7 +73,7 @@ char	**ft_split(const char *s, char c)
 			break ;
 		array[j] = (char *)malloc(sizeof(char) * (word_len(s, c)) + 1);
 		if (array[j] == NULL)
-			return (ft_free(array));
+			return (free_arr(array));
 		k = 0;
 		while (*s != c && *s != '\0')
 			array[j][k++] = *s++;
@@ -89,10 +83,25 @@ char	**ft_split(const char *s, char c)
 	return (array);
 }
 
-// int main(void)
+char	**ft_split(const char *s, char c)
+{
+	char	**array;
+
+	if (s == NULL)
+		return (NULL);
+	array = (char **)malloc(sizeof(char *) * (word_counter(s, c) + 1));
+	if (!array)
+		return (NULL);
+	return (append_arr(s, c, array));
+}
+
+// int	main(void)
 // {
-// 	char *s = "      split       this for   me  ! ";
-// 	char **result = ft_split(s, ' ');
+// 	char	*s;
+// 	char	**result;
+
+// 	s = "      split       this for   me  ! ";
+// 	result = ft_split(s, ' ');
 // 	while (*result != NULL)
 // 	{
 // 		printf("%s\n", *result);
