@@ -6,7 +6,7 @@
 /*   By: shmorish <shmorish@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/05/25 15:45:32 by morishitash       #+#    #+#             */
-/*   Updated: 2023/05/28 15:17:13 by shmorish         ###   ########.fr       */
+/*   Updated: 2023/05/28 15:57:04 by shmorish         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -59,7 +59,7 @@ static void	*free_arr(char **array)
 	return (NULL);
 }
 
-char	**append_arr(const char *s, char c, char **array)
+static char	**append_arr(const char *s, char c, char **array)
 {
 	int	j;
 	int	k;
