@@ -1,7 +1,7 @@
 #!/bin/bash
 
 if [ -e result.log ]; then
-    rm error.log
+    rm result.log
 fi
 cd ..
 if [ ! -e libft-unit-test ]; then

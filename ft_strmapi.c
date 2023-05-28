@@ -6,7 +6,7 @@
 /*   By: shmorish <shmorish@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/05/28 04:56:15 by shmorish          #+#    #+#             */
-/*   Updated: 2023/05/28 05:08:09 by shmorish         ###   ########.fr       */
+/*   Updated: 2023/05/28 14:07:38 by shmorish         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,6 +18,8 @@ char	*ft_strmapi(const char *s, char (*f)(unsigned int, char))
 	int		i;
 
 	i = 0;
+	if (s == NULL || f == NULL)
+		return (NULL);
 	ret = (char *)malloc(sizeof(char) * (ft_strlen(s) + 1));
 	if (!ret)
 		return (0);

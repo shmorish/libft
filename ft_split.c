@@ -6,7 +6,7 @@
 /*   By: shmorish <shmorish@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/05/25 15:45:32 by morishitash       #+#    #+#             */
-/*   Updated: 2023/05/28 11:19:52 by shmorish         ###   ########.fr       */
+/*   Updated: 2023/05/28 14:16:01 by shmorish         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -43,7 +43,6 @@ static int	word_len(const char *s, char c)
 	while (s[i] != '\0' && s[i] != c)
 		i++;
 	return (i);
-
 }
 
 static void	*ft_free(char **array)
@@ -66,6 +65,8 @@ char	**ft_split(const char *s, char c)
 	int		j;
 	int		k;
 
+	if (s == NULL)
+		return (NULL);
 	array = (char **)malloc(sizeof(char *) * (word_counter(s, c) + 1));
 	if (!array)
 		return (NULL);
@@ -87,7 +88,6 @@ char	**ft_split(const char *s, char c)
 	array[j] = NULL;
 	return (array);
 }
-
 
 // int main(void)
 // {
