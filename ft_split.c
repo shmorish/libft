@@ -6,12 +6,59 @@
 /*   By: shmorish <shmorish@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/05/25 15:45:32 by morishitash       #+#    #+#             */
-/*   Updated: 2023/05/28 00:45:09 by shmorish         ###   ########.fr       */
+/*   Updated: 2023/05/28 11:19:52 by shmorish         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <stdlib.h>
+#include <stdio.h>
 #include "libft.h"
+
+static int	word_counter(const char *s, char c)
+{
+	size_t	i;
+	size_t	counter;
+
+	i = 0;
+	counter = 0;
+	while (s[i] != '\0')
+	{
+		if (s[i] != c)
+		{
+			counter++;
+			while (s[i] != c && s[i] != '\0')
+				i++;
+		}
+		else
+			i++;
+	}
+	return (counter);
+}
+
+static int	word_len(const char *s, char c)
+{
+	size_t	i;
+
+	i = 0;
+	while (s[i] != '\0' && s[i] != c)
+		i++;
+	return (i);
+
+}
+
+static void	*ft_free(char **array)
+{
+	size_t	i;
+
+	i = 0;
+	while (array[i] != '\0')
+	{
+		free(array[i]);
+		i++;
+	}
+	free(array);
+	return (NULL);
+}
 
 char	**ft_split(const char *s, char c)
 {
@@ -19,7 +66,7 @@ char	**ft_split(const char *s, char c)
 	int		j;
 	int		k;
 
-	array = (char **)malloc(sizeof(char *) * (ft_strlen(s) + 1));
+	array = (char **)malloc(sizeof(char *) * (word_counter(s, c) + 1));
 	if (!array)
 		return (NULL);
 	j = 0;
@@ -29,9 +76,9 @@ char	**ft_split(const char *s, char c)
 			s++;
 		if (*s == '\0')
 			break ;
-		array[j] = (char *)malloc(sizeof(char) * (ft_strlen(s) + 1));
-		if (!array[j])
-			return (NULL);
+		array[j] = (char *)malloc(sizeof(char) * (word_len(s, c)) + 1);
+		if (array[j] == NULL)
+			return (ft_free(array));
 		k = 0;
 		while (*s != c && *s != '\0')
 			array[j][k++] = *s++;
@@ -41,7 +88,7 @@ char	**ft_split(const char *s, char c)
 	return (array);
 }
 
-// #include <stdio.h>
+
 // int main(void)
 // {
 // 	char *s = "      split       this for   me  ! ";
@@ -51,5 +98,4 @@ char	**ft_split(const char *s, char c)
 // 		printf("%s\n", *result);
 // 		result++;
 // 	}
-// 	printf("%c\n", **result);
 // }

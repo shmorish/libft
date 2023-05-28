@@ -6,7 +6,7 @@
 /*   By: shmorish <shmorish@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/05/21 04:10:05 by morishitash       #+#    #+#             */
-/*   Updated: 2023/05/26 21:55:43 by shmorish         ###   ########.fr       */
+/*   Updated: 2023/05/28 10:49:44 by shmorish         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,6 +17,8 @@ char	*ft_strtrim(const char *s1, const char *set)
 	size_t	start;
 	size_t	end;
 
+	if (s1 == NULL || set == NULL)
+		return (NULL);
 	start = 0;
 	end = ft_strlen(s1) - 1;
 	while (ft_strchr(set, s1[start]) != NULL)
