@@ -6,7 +6,7 @@
 /*   By: shmorish <shmorish@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/05/21 04:10:05 by morishitash       #+#    #+#             */
-/*   Updated: 2023/05/28 10:49:44 by shmorish         ###   ########.fr       */
+/*   Updated: 2023/06/04 19:19:44 by shmorish         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,6 +20,8 @@ char	*ft_strtrim(const char *s1, const char *set)
 	if (s1 == NULL || set == NULL)
 		return (NULL);
 	start = 0;
+	if (ft_strlen(s1) == 0)
+		return (ft_strdup(""));
 	end = ft_strlen(s1) - 1;
 	while (ft_strchr(set, s1[start]) != NULL)
 	{
@@ -29,6 +31,8 @@ char	*ft_strtrim(const char *s1, const char *set)
 	{
 		end--;
 	}
+	if (start > end)
+		return (ft_strdup(""));
 	return (ft_substr(s1, start, end - start + 1));
 }
 

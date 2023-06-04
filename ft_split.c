@@ -6,7 +6,7 @@
 /*   By: shmorish <shmorish@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/05/25 15:45:32 by morishitash       #+#    #+#             */
-/*   Updated: 2023/05/28 15:57:04 by shmorish         ###   ########.fr       */
+/*   Updated: 2023/06/04 19:18:31 by shmorish         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -50,7 +50,7 @@ static void	*free_arr(char **array)
 	size_t	i;
 
 	i = 0;
-	while (array[i] != '\0')
+	while (array[i] != NULL)
 	{
 		free(array[i]);
 		i++;
