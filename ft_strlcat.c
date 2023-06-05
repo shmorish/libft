@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_strlcat.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: shmorish <shmorish@student.42.fr>          +#+  +:+       +#+        */
+/*   By: morishitashoto <morishitashoto@student.    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/05/16 19:35:49 by shmorish          #+#    #+#             */
-/*   Updated: 2023/05/19 19:50:35 by shmorish         ###   ########.fr       */
+/*   Updated: 2023/06/05 17:31:32 by morishitash      ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 

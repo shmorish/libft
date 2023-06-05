@@ -3,15 +3,14 @@
 /*                                                        :::      ::::::::   */
 /*   ft_atoi.c                                          :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: shmorish <shmorish@student.42.fr>          +#+  +:+       +#+        */
+/*   By: morishitashoto <morishitashoto@student.    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/05/17 10:25:57 by shmorish          #+#    #+#             */
-/*   Updated: 2023/05/21 10:13:42 by shmorish         ###   ########.fr       */
+/*   Updated: 2023/06/04 22:15:31 by morishitash      ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <limits.h>
-#include <stddef.h>
+#include "libft.h"
 
 static long	check_overflow(long num, char str, int minus)
 {

@@ -3,20 +3,18 @@
 /*                                                        :::      ::::::::   */
 /*   ft_memcpy.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: shmorish <shmorish@student.42.fr>          +#+  +:+       +#+        */
+/*   By: morishitashoto <morishitashoto@student.    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/05/16 17:35:49 by shmorish          #+#    #+#             */
-/*   Updated: 2023/05/28 10:09:39 by shmorish         ###   ########.fr       */
+/*   Updated: 2023/06/04 22:24:02 by morishitash      ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <stddef.h>
-#include <stdio.h>
-#include <string.h>
+#include "libft.h"
 
 void	*ft_memcpy(void *dst, const void *src, size_t n)
 {
-	unsigned int	i;
+	size_t	i;
 
 	i = 0;
 	if (!dst && !src)

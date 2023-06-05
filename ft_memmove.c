@@ -6,11 +6,10 @@
 /*   By: morishitashoto <morishitashoto@student.    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/05/16 17:59:22 by shmorish          #+#    #+#             */
-/*   Updated: 2023/05/18 15:38:12 by morishitash      ###   ########.fr       */
+/*   Updated: 2023/06/04 22:16:52 by morishitash      ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <stddef.h>
 #include "libft.h"
 
 void	*ft_memmove(void *dst, const void *src, size_t len)
