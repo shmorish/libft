@@ -6,14 +6,11 @@
 /*   By: morishitashoto <morishitashoto@student.    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/05/16 15:36:54 by shmorish          #+#    #+#             */
-/*   Updated: 2023/05/18 15:33:17 by morishitash      ###   ########.fr       */
+/*   Updated: 2023/06/06 14:49:10 by morishitash      ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 int	ft_isalpha(int c)
 {
-	if ((64 < c && c < 91) || (96 < c && c < 123))
-		return (1);
-	else
-		return (0);
+	return (('a' <= c && c <= 'z') || ('A' <= c && c <= 'Z'));
 }

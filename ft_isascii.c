@@ -3,17 +3,14 @@
 /*                                                        :::      ::::::::   */
 /*   ft_isascii.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: shmorish <shmorish@student.42.fr>          +#+  +:+       +#+        */
+/*   By: morishitashoto <morishitashoto@student.    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/05/16 16:24:16 by shmorish          #+#    #+#             */
-/*   Updated: 2023/05/19 18:56:55 by shmorish         ###   ########.fr       */
+/*   Updated: 2023/06/06 14:49:28 by morishitash      ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 int	ft_isascii(int c)
 {
-	if (0 <= c && c <= 127)
-		return (1);
-	else
-		return (0);
+	return (0 <= c && c <= 127);
 }

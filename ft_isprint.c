@@ -3,17 +3,14 @@
 /*                                                        :::      ::::::::   */
 /*   ft_isprint.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: shmorish <shmorish@student.42.fr>          +#+  +:+       +#+        */
+/*   By: morishitashoto <morishitashoto@student.    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/05/16 16:32:21 by shmorish          #+#    #+#             */
-/*   Updated: 2023/05/19 18:56:43 by shmorish         ###   ########.fr       */
+/*   Updated: 2023/06/06 14:49:55 by morishitash      ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 int	ft_isprint(int c)
 {
-	if (32 <= c && c <= 126)
-		return (1);
-	else
-		return (0);
+	return (32 <= c && c <= 126);
 }
