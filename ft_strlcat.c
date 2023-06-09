@@ -6,7 +6,7 @@
 /*   By: morishitashoto <morishitashoto@student.    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/05/16 19:35:49 by shmorish          #+#    #+#             */
-/*   Updated: 2023/06/06 15:00:20 by morishitash      ###   ########.fr       */
+/*   Updated: 2023/06/08 14:47:25 by morishitash      ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,7 +23,7 @@ size_t	ft_strlcat(char *dst, const char *src, size_t dstsize)
 	dest_len = ft_strlen(dst);
 	if (dstsize <= dest_len)
 		return (dstsize + src_len);
-	ft_strlcpy(&dst[dest_len], src, dstsize - dest_len);	
+	ft_strlcpy(&dst[dest_len], src, dstsize - dest_len);
 	if (dstsize > dest_len)
 		dstsize = dest_len;
 	return (src_len + dstsize);
