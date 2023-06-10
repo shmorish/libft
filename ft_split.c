@@ -6,13 +6,13 @@
 /*   By: morishitashoto <morishitashoto@student.    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/05/25 15:45:32 by morishitash       #+#    #+#             */
-/*   Updated: 2023/06/04 22:17:08 by morishitash      ###   ########.fr       */
+/*   Updated: 2023/06/11 07:47:12 by morishitash      ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-static int	word_counter(const char *s, char c)
+static size_t	word_counter(const char *s, char c)
 {
 	size_t	i;
 	size_t	counter;
@@ -33,7 +33,7 @@ static int	word_counter(const char *s, char c)
 	return (counter);
 }
 
-static int	word_len(const char *s, char c)
+static size_t	word_len(const char *s, char c)
 {
 	size_t	i;
 
@@ -59,8 +59,8 @@ static void	*free_arr(char **array)
 
 static char	**append_arr(const char *s, char c, char **array)
 {
-	int	j;
-	int	k;
+	size_t	j;
+	size_t	k;
 
 	j = 0;
 	while (*s != '\0')
@@ -69,7 +69,7 @@ static char	**append_arr(const char *s, char c, char **array)
 			s++;
 		if (*s == '\0')
 			break ;
-		array[j] = (char *)malloc(sizeof(char) * (word_len(s, c)) + 1);
+		array[j] = (char *)malloc(sizeof(char) * (word_len(s, c) + 1));
 		if (array[j] == NULL)
 			return (free_arr(array));
 		k = 0;
