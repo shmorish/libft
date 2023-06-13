@@ -1,3 +1,0 @@
-[submodule "submodules/ft_printf"]
-    path = submodules/ft_printf
-    url = https://www.github.com/Mori062/ft_printf.git
