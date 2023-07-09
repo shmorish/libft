@@ -24,9 +24,9 @@ STRING_SRCS = string/ft_bzero.c string/ft_memchr.c string/ft_memcmp.c string/ft_
 PRINTF_PATH = ./stdio/ft_printf
 PRINTF = libftprintf.a
 
-M_SRCS = $(CTYPE_SRCS) $(LIST_SRCS) $(STDIO_SRCS) $(STDLIB_SRCS) $(STRING_SRCS)
+SRCS = $(CTYPE_SRCS) $(LIST_SRCS) $(STDIO_SRCS) $(STDLIB_SRCS) $(STRING_SRCS)
 
-OBJS = $(M_SRCS:.c=.o)
+OBJS = $(SRCS:.c=.o)
 
 all: $(NAME)
 
@@ -40,7 +40,7 @@ $(NAME): $(OBJS)
 
 clean:
 	make clean -C $(PRINTF_PATH)
-	$(RM) $(OBJS) $(B_SRCS:.c=.o)
+	$(RM) $(OBJS)
 
 fclean: clean
 	$(RM) $(NAME)
