@@ -14,6 +14,7 @@ result.log
 
 ## others
 libft.a
+main.c
 a.out
 *.o
 *.swp
