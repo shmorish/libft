@@ -1,0 +1,20 @@
+# Object files
+*.o
+*.obj
+
+# Libraries
+*.a
+
+# Executables
+*.exe
+*.out
+*.app
+
+# Debug files
+*.dSYM/
+.vscode/
+
+# Tester files
+printfTester/
+ft_printfTester/
+main.c
