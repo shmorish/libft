@@ -6,11 +6,12 @@
 /*   By: morishitashoto <morishitashoto@student.    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/07/12 12:52:53 by morishitash       #+#    #+#             */
-/*   Updated: 2023/07/12 12:53:40 by morishitash      ###   ########.fr       */
+/*   Updated: 2023/07/12 14:31:07 by morishitash      ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../include/ft_string.h"
+#include "../include/ft_ctype.h"
 
 long	ft_atol(const char *str)
 {

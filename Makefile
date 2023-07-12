@@ -16,7 +16,7 @@ STDIO_SRCS = stdio/ft_putchar_fd.c stdio/ft_putendl_fd.c stdio/ft_putnbr_fd.c st
 STDLIB_SRCS = stdlib/ft_atoi.c stdlib/ft_atol.c stdlib/ft_atoll.c stdlib/ft_calloc.c stdlib/ft_itoa.c
 
 STRING_SRCS = string/ft_bzero.c string/ft_memchr.c string/ft_memcmp.c string/ft_memcpy.c \
-				string/ft_memmove.c string/ft_memset.c string/ft_split.c string/ft_strchr.c sting/ft_strcmp.c \
+				string/ft_memmove.c string/ft_memset.c string/ft_split.c string/ft_strchr.c string/ft_strcmp.c \
 				string/ft_strdup.c string/ft_strjoin.c string/ft_strlcat.c string/ft_strlcpy.c \
 				string/ft_strlen.c string/ft_strmapi.c string/ft_strncmp.c string/ft_strnstr.c \
 				string/ft_strrchr.c string/ft_strtrim.c string/ft_substr.c
