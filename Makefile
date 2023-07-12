@@ -5,7 +5,7 @@ CFLAGS = -Wall -Wextra -Werror
 INCLUDE = 'libft.h'
 
 CTYPE_SRCS = ctype/ft_isalnum.c ctype/ft_isalpha.c ctype/ft_isascii.c ctype/ft_isdigit.c \
-				ctype/ft_isprint.c ctype/ft_tolower.c ctype/ft_toupper.c
+				ctype/ft_isprint.c ctype/ft_isspace.c ctype/ft_tolower.c ctype/ft_toupper.c
 
 LIST_SRCS = list/ft_lstadd_back.c list/ft_lstadd_front.c list/ft_lstclear.c list/ft_lstdelone.c \
 				list/ft_lstiter.c list/ft_lstlast.c list/ft_lstmap.c list/ft_lstnew.c list/ft_lstsize.c
