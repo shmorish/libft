@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_string.h                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: shmorish <shmorish@student.42.fr>          +#+  +:+       +#+        */
+/*   By: morishitashoto <morishitashoto@student.    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/07/09 10:20:57 by shmorish          #+#    #+#             */
-/*   Updated: 2023/07/09 10:25:57 by shmorish         ###   ########.fr       */
+/*   Updated: 2023/07/12 12:34:00 by morishitash      ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -26,6 +26,7 @@ void		*ft_memmove(void *dst, const void *src, size_t len);
 void		*ft_memset(void *b, int c, size_t len);
 char		**ft_split(const char *s, char c);
 char		*ft_strchr(const char *s, int c);
+int			ft_strcmp(const char *s1, const char *s2);
 char		*ft_strdup(const char *s1);
 void		ft_striteri(char *s, void (*f)(unsigned int, char *));
 char		*ft_strjoin(const char *s1, const char *s2);
