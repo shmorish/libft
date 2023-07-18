@@ -6,7 +6,7 @@
 /*   By: morishitashoto <morishitashoto@student.    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/06/02 14:03:09 by morishitash       #+#    #+#             */
-/*   Updated: 2023/06/10 23:42:21 by morishitash      ###   ########.fr       */
+/*   Updated: 2023/07/18 19:52:07 by morishitash      ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -30,5 +30,6 @@ int	ft_putnbr(int nb);
 int	ft_putunbr(unsigned int nb);
 int	ft_lower_puthex(unsigned int nb);
 int	ft_upper_puthex(unsigned int nb);
+int	ft_putbinary(unsigned int nb);
 
 #endif

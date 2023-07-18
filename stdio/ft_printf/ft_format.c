@@ -6,7 +6,7 @@
 /*   By: morishitashoto <morishitashoto@student.    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/06/06 16:20:05 by morishitash       #+#    #+#             */
-/*   Updated: 2023/06/11 11:10:03 by morishitash      ###   ########.fr       */
+/*   Updated: 2023/07/18 19:50:42 by morishitash      ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -33,6 +33,8 @@ int	ft_format(va_list *data, const char format)
 		len += ft_lower_puthex(va_arg(*data, unsigned int));
 	if (format == 'X')
 		len += ft_upper_puthex(va_arg(*data, unsigned int));
+	if (format == 'b')
+		len += ft_putbinary(va_arg(*data, unsigned int));
 	if (format == '%')
 		len += write(STDOUT_FILENO, "%", 1);
 	return (len);
