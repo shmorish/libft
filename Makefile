@@ -30,20 +30,28 @@ OBJS = $(SRCS:.c=.o)
 
 all: $(NAME)
 
+GREEN = \e[38;5;118m
+YELLOW = \e[38;5;226m
+RESET = \e[0m
+_SUCCESS = [$(GREEN)SUCCESS$(RESET)]
+_INFO = [$(YELLOW)INFO$(RESET)]
+
 $(NAME): $(OBJS)
-	make -C $(PRINTF_PATH)
-	mv $(PRINTF_PATH)/$(PRINTF) ./$(NAME)
-	ar rc $(NAME) $(OBJS)
+	@ make -C $(PRINTF_PATH)
+	@ mv $(PRINTF_PATH)/$(PRINTF) ./$(NAME)
+	@ ar rc $(NAME) $(OBJS)
+	@printf "$(_SUCCESS) DONE MAKE libft\n"
 
 .c.o: $(OBJS)
-	$(CC) $(CFLAGS) -I $(INCLUDE) -c $< -o $@
+	@ $(CC) $(CFLAGS) -I $(INCLUDE) -c $< -o $@
 
 clean:
-	make clean -C $(PRINTF_PATH)
-	$(RM) $(OBJS)
+	@ make clean -C $(PRINTF_PATH)
+	@ $(RM) $(OBJS)
+	@printf "$(_INFO) CLEAN libft\n"
 
 fclean: clean
-	$(RM) $(NAME)
+	@ $(RM) $(NAME)
 
 re: fclean all
 
