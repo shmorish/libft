@@ -52,6 +52,7 @@ clean:
 
 fclean: clean
 	@ $(RM) $(NAME)
+	@printf "$(_INFO) REMOVE libft.a\n"
 
 re: fclean all
 
