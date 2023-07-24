@@ -30,17 +30,16 @@ OBJS = $(SRCS:.c=.o)
 
 all: $(NAME)
 
-GREEN = \e[38;5;118m
-YELLOW = \e[38;5;226m
-RESET = \e[0m
-_SUCCESS = [$(GREEN)SUCCESS$(RESET)]
-_INFO = [$(YELLOW)INFO$(RESET)]
+CHECK = \033[32m[✔]\033[0m
+REMOVE = \033[31m[✘]\033[0m
+BLUE = \033[1;34m
+RESET = \033[0m
 
 $(NAME): $(OBJS)
 	@ make -C $(PRINTF_PATH)
 	@ mv $(PRINTF_PATH)/$(PRINTF) ./$(NAME)
 	@ ar rc $(NAME) $(OBJS)
-	@printf "$(_SUCCESS) DONE MAKE libft\n"
+	@echo "$(CHECK) $(BLUE)$(NAME) created$(RESET)"
 
 .c.o: $(OBJS)
 	@ $(CC) $(CFLAGS) -I $(INCLUDE) -c $< -o $@
@@ -48,11 +47,12 @@ $(NAME): $(OBJS)
 clean:
 	@ make clean -C $(PRINTF_PATH)
 	@ $(RM) $(OBJS)
-	@printf "$(_INFO) CLEAN libft\n"
+	@echo "$(REMOVE) $(BLUE)Remove libft object files... $(RESET)"
 
 fclean: clean
 	@ $(RM) $(NAME)
-	@printf "$(_INFO) REMOVE libft.a\n"
+	@ make fclean -C $(PRINTF_PATH)
+	@echo "$(REMOVE) $(BLUE)Remove $(NAME)$(RESET)"
 
 re: fclean all
 

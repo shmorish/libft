@@ -16,28 +16,27 @@ SRCS = ft_printf.c \
 
 OBJS = $(SRCS:.c=.o)
 
-GREEN = \e[38;5;118m
-YELLOW = \e[38;5;226m
-RESET = \e[0m
-_SUCCESS = [$(GREEN)SUCCESS$(RESET)]
-_INFO = [$(YELLOW)INFO$(RESET)]
+CHECK = \033[32m[✔]\033[0m
+REMOVE = \033[31m[✘]\033[0m
+BLUE = \033[1;34m
+RESET = \033[0m
 
 all: $(NAME)
 
 $(NAME): $(OBJS)
 	@ ar rc $(NAME) $(OBJS)
-	@printf "$(_SUCCESS) DONE MAKE ft_printf\n"
+	@echo "$(CHECK) $(BLUE)$(NAME) created$(RESET)"
 
 .c.o: $(OBJS)
 	@ $(CC) $(CFLAGS) -I $(INCLUDE) -c $< -o $@
 
 clean:
 	@ $(RM) $(OBJS) $(B_SRCS:.c=.o)
-	@printf "$(_INFO) CLEAN ft_printf\n"
+	@echo "$(REMOVE) $(BLUE)Remove ft_printf object files... $(RESET)"
 
 fclean: clean
 	@ $(RM) $(NAME)
-	@printf "$(_INFO) REMOVE libftprintf.a\n"
+	@echo "$(REMOVE) $(BLUE)Remove $(NAME)$(RESET)"
 
 re: fclean all
 
