@@ -25,7 +25,7 @@ all: $(NAME)
 
 $(NAME): $(OBJS)
 	@ ar rc $(NAME) $(OBJS)
-	@echo "$(CHECK) $(BLUE)$(NAME) created$(RESET)"
+	@echo "$(CHECK) $(BLUE)Compiling ft_printf...$(RESET)"
 
 .c.o: $(OBJS)
 	@ $(CC) $(CFLAGS) -I $(INCLUDE) -c $< -o $@

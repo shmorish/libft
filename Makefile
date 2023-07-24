@@ -39,7 +39,7 @@ $(NAME): $(OBJS)
 	@ make -C $(PRINTF_PATH)
 	@ mv $(PRINTF_PATH)/$(PRINTF) ./$(NAME)
 	@ ar rc $(NAME) $(OBJS)
-	@echo "$(CHECK) $(BLUE)$(NAME) created$(RESET)"
+	@echo "$(CHECK) $(BLUE)Compiling libft...$(RESET)"
 
 .c.o: $(OBJS)
 	@ $(CC) $(CFLAGS) -I $(INCLUDE) -c $< -o $@
