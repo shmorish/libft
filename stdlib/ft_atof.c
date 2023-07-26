@@ -6,7 +6,7 @@
 /*   By: morishitashoto <morishitashoto@student.    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/07/26 16:36:55 by morishitash       #+#    #+#             */
-/*   Updated: 2023/07/26 16:41:42 by morishitash      ###   ########.fr       */
+/*   Updated: 2023/07/26 23:28:59 by morishitash      ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,28 +15,23 @@
 
 double	ft_atof(const char *str)
 {
-	double	result;
-	double	decimal;
-	int		sign;
+	double	res;
+	double	res2;
+	char	*c;
+	int		len;
 
-	result = 0.0;
-	decimal = 0.0;
-	sign = 1;
-	while (ft_isspace(*str))
-		str++;
-	if (*str == '-')
-		sign = -1;
-	if (*str == '-' || *str == '+')
-		str++;
-	while (ft_isdigit(*str))
-		result = result * 10.0 + (*str++ - '0');
-	if (*str == '.')
-	{
-		str++;
-		while (ft_isdigit(*str))
-		{
-			decimal = decimal * 10.0 + (*str++ - '0');
-		}
-	}
-	return ((result + decimal / 10.0) * sign);
+	c = (char *)str;
+	res = (double)ft_atoi(c);
+	while (*c && *c != '.')
+		c++;
+	if (*c == '.')
+		c++;
+	res2 = (double)ft_atoi(c);
+	len = ft_strlen(c);
+	while (len--)
+		res2 /= 10;
+	if (res >= 0)
+		return (res + res2);
+	else
+		return (res + -res2);
 }
