@@ -6,11 +6,11 @@
 /*   By: morishitashoto <morishitashoto@student.    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/07/26 16:36:55 by morishitash       #+#    #+#             */
-/*   Updated: 2023/07/26 16:37:29 by morishitash      ###   ########.fr       */
+/*   Updated: 2023/07/26 16:39:59 by morishitash      ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-# include "ft_stdlib.h"
+#include "../include/ft_stdlib.h"
 
 double	ft_atof(const char *str)
 {

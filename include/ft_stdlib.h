@@ -6,7 +6,7 @@
 /*   By: morishitashoto <morishitashoto@student.    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/07/09 10:09:53 by shmorish          #+#    #+#             */
-/*   Updated: 2023/07/12 12:54:27 by morishitash      ###   ########.fr       */
+/*   Updated: 2023/07/26 16:39:30 by morishitash      ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,5 +23,6 @@ long		ft_atol(const char *str);
 long long	ft_atoll(const char *str);
 void		*ft_calloc(size_t count, size_t size);
 char		*ft_itoa(int n);
+double		ft_atof(const char *str);
 
 #endif
