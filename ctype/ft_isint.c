@@ -6,16 +6,12 @@
 /*   By: morishitashoto <morishitashoto@student.    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/07/31 17:35:42 by morishitash       #+#    #+#             */
-/*   Updated: 2023/07/31 18:37:28 by morishitash      ###   ########.fr       */
+/*   Updated: 2023/07/31 19:32:40 by morishitash      ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../includes/ft_ctype.h"
 
-
-// return 1 if str is int from INT_MIN to INT_MAX
-// return 0 if str is not int
-// use like atoi
 int	ft_isint(char *str)
 {
 	int		sign;
