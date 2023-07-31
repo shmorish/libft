@@ -3,14 +3,14 @@
 /*                                                        :::      ::::::::   */
 /*   ft_strchr.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: shmorish <shmorish@student.42.fr>          +#+  +:+       +#+        */
+/*   By: morishitashoto <morishitashoto@student.    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/05/16 21:30:10 by shmorish          #+#    #+#             */
-/*   Updated: 2023/07/09 10:26:51 by shmorish         ###   ########.fr       */
+/*   Updated: 2023/07/31 17:39:29 by morishitash      ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "../include/ft_string.h"
+#include "../includes/ft_string.h"
 
 char	*ft_strchr(const char *s, int c)
 {

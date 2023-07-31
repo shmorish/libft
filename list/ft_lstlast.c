@@ -3,14 +3,14 @@
 /*                                                        :::      ::::::::   */
 /*   ft_lstlast.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: shmorish <shmorish@student.42.fr>          +#+  +:+       +#+        */
+/*   By: morishitashoto <morishitashoto@student.    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/05/28 13:16:43 by shmorish          #+#    #+#             */
-/*   Updated: 2023/07/09 11:58:23 by shmorish         ###   ########.fr       */
+/*   Updated: 2023/07/31 17:37:55 by morishitash      ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "../include/ft_list.h"
+#include "../includes/ft_list.h"
 
 t_list	*ft_lstlast(t_list *lst)
 {

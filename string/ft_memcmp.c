@@ -3,14 +3,14 @@
 /*                                                        :::      ::::::::   */
 /*   ft_memcmp.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: shmorish <shmorish@student.42.fr>          +#+  +:+       +#+        */
+/*   By: morishitashoto <morishitashoto@student.    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/05/17 21:43:23 by morishitash       #+#    #+#             */
-/*   Updated: 2023/07/09 10:26:26 by shmorish         ###   ########.fr       */
+/*   Updated: 2023/07/31 17:39:15 by morishitash      ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "../include/ft_string.h"
+#include "../includes/ft_string.h"
 
 int	ft_memcmp(const void *s1, const void *s2, size_t n)
 {

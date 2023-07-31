@@ -3,14 +3,14 @@
 /*                                                        :::      ::::::::   */
 /*   ft_split.c                                         :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: shmorish <shmorish@student.42.fr>          +#+  +:+       +#+        */
+/*   By: morishitashoto <morishitashoto@student.    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/05/25 15:45:32 by morishitash       #+#    #+#             */
-/*   Updated: 2023/07/09 10:26:46 by shmorish         ###   ########.fr       */
+/*   Updated: 2023/07/31 17:39:26 by morishitash      ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "../include/ft_string.h"
+#include "../includes/ft_string.h"
 
 static size_t	word_counter(const char *s, char c)
 {

@@ -3,14 +3,14 @@
 /*                                                        :::      ::::::::   */
 /*   ft_strmapi.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: shmorish <shmorish@student.42.fr>          +#+  +:+       +#+        */
+/*   By: morishitashoto <morishitashoto@student.    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/05/28 04:56:15 by shmorish          #+#    #+#             */
-/*   Updated: 2023/07/09 10:27:19 by shmorish         ###   ########.fr       */
+/*   Updated: 2023/07/31 17:39:53 by morishitash      ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "../include/ft_string.h"
+#include "../includes/ft_string.h"
 
 char	*ft_strmapi(const char *s, char (*f)(unsigned int, char))
 {

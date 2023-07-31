@@ -3,14 +3,14 @@
 /*                                                        :::      ::::::::   */
 /*   ft_itoa.c                                          :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: shmorish <shmorish@student.42.fr>          +#+  +:+       +#+        */
+/*   By: morishitashoto <morishitashoto@student.    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/05/28 01:02:30 by shmorish          #+#    #+#             */
-/*   Updated: 2023/07/09 10:15:21 by shmorish         ###   ########.fr       */
+/*   Updated: 2023/07/31 17:38:57 by morishitash      ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "../include/ft_stdlib.h"
+#include "../includes/ft_stdlib.h"
 
 static int	ft_abs(int n)
 {

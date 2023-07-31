@@ -6,11 +6,9 @@
 /*   By: morishitashoto <morishitashoto@student.    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/07/12 12:32:33 by morishitash       #+#    #+#             */
-/*   Updated: 2023/07/12 12:32:54 by morishitash      ###   ########.fr       */
+/*   Updated: 2023/07/31 17:41:05 by morishitash      ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
-
-#include "../include/ft_string.h"
 
 int	ft_strcmp(const char *s1, const char *s2)
 {

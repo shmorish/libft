@@ -3,14 +3,14 @@
 /*                                                        :::      ::::::::   */
 /*   ft_lstnew.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: shmorish <shmorish@student.42.fr>          +#+  +:+       +#+        */
+/*   By: morishitashoto <morishitashoto@student.    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/05/28 10:19:09 by shmorish          #+#    #+#             */
-/*   Updated: 2023/07/09 11:58:30 by shmorish         ###   ########.fr       */
+/*   Updated: 2023/07/31 17:38:00 by morishitash      ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "../include/ft_list.h"
+#include "../includes/ft_list.h"
 
 t_list	*ft_lstnew(void *content)
 {

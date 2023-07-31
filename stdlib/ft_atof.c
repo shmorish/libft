@@ -6,12 +6,12 @@
 /*   By: morishitashoto <morishitashoto@student.    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/07/26 16:36:55 by morishitash       #+#    #+#             */
-/*   Updated: 2023/07/26 23:28:59 by morishitash      ###   ########.fr       */
+/*   Updated: 2023/07/31 17:38:40 by morishitash      ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "../include/ft_stdlib.h"
-#include "../include/ft_ctype.h"
+#include "../includes/ft_stdlib.h"
+#include "../includes/ft_ctype.h"
 
 double	ft_atof(const char *str)
 {

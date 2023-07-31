@@ -3,14 +3,14 @@
 /*                                                        :::      ::::::::   */
 /*   ft_putstr_fd.c                                     :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: shmorish <shmorish@student.42.fr>          +#+  +:+       +#+        */
+/*   By: morishitashoto <morishitashoto@student.    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/05/28 05:20:30 by shmorish          #+#    #+#             */
-/*   Updated: 2023/07/09 10:09:25 by shmorish         ###   ########.fr       */
+/*   Updated: 2023/07/31 17:38:24 by morishitash      ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "../include/ft_stdio.h"
+#include "../includes/ft_stdio.h"
 
 void	ft_putstr_fd(const char *s, int fd)
 {

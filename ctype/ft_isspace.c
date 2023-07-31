@@ -6,11 +6,11 @@
 /*   By: morishitashoto <morishitashoto@student.    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/07/12 14:25:57 by morishitash       #+#    #+#             */
-/*   Updated: 2023/07/12 14:30:42 by morishitash      ###   ########.fr       */
+/*   Updated: 2023/07/31 17:37:25 by morishitash      ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "../include/ft_ctype.h"
+#include "../includes/ft_ctype.h"
 
 int	ft_isspace(int c)
 {

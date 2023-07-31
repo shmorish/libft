@@ -6,11 +6,11 @@
 /*   By: morishitashoto <morishitashoto@student.    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/07/27 18:54:18 by morishitash       #+#    #+#             */
-/*   Updated: 2023/07/27 19:18:05 by morishitash      ###   ########.fr       */
+/*   Updated: 2023/07/31 17:37:19 by morishitash      ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "../include/ft_ctype.h"
+#include "../includes/ft_ctype.h"
 
 int	ft_isdouble(char *str)
 {
