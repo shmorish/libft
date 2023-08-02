@@ -6,7 +6,7 @@
 /*   By: morishitashoto <morishitashoto@student.    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/07/12 14:25:57 by morishitash       #+#    #+#             */
-/*   Updated: 2023/07/31 17:37:25 by morishitash      ###   ########.fr       */
+/*   Updated: 2023/08/02 20:19:33 by morishitash      ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,6 +14,5 @@
 
 int	ft_isspace(int c)
 {
-	return (c == ' ' || c == '\t' || c == '\n'
-		|| c == '\v' || c == '\f' || c == '\r');
+	return ((c == ' ') || (9 <= c && c <= 13));
 }
