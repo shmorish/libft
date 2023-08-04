@@ -6,31 +6,35 @@
 /*   By: morishitashoto <morishitashoto@student.    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/07/31 17:35:42 by morishitash       #+#    #+#             */
-/*   Updated: 2023/07/31 19:32:40 by morishitash      ###   ########.fr       */
+/*   Updated: 2023/08/04 17:04:14 by morishitash      ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../includes/ft_ctype.h"
+#include "../includes/ft_stdlib.h"
+#include "../includes/ft_string.h"
 
+// check that the string is a valid integer
 int	ft_isint(char *str)
 {
-	int		sign;
-	long	result;
+	long	num;
+	size_t	i;
 
-	result = 0;
-	sign = 1;
-	while (ft_isspace(*str))
-		str++;
-	if (*str == '-')
-	{
-		sign = -sign;
-		str++;
-	}
-	while (ft_isdigit(*str))
-		result = result * 10 + (*str++ - '0');
-	if (*str != '\0')
+	i = 0;
+	if (ft_strlen(str) > 11)
 		return (0);
-	if (result * sign > INT_MAX || result * sign < INT_MIN)
+	if (str[i] == '-')
+		i++;
+	if (str[i] == '\0')
+		return (0);
+	while (str[i] != '\0')
+	{
+		if (ft_isdigit(str[i]) == 0)
+			return (0);
+		i++;
+	}
+	num = ft_strtol(str);
+	if (num < INT_MIN || INT_MAX < num)
 		return (0);
 	return (1);
 }
