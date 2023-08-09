@@ -30,12 +30,12 @@ $(NAME): $(OBJS)
 
 
 # for Mac
-# .c.o: $(OBJS)
-# 	@ $(CC) $(CFLAGS) -I $(INCLUDE) -c $< -o $@
+.c.o: $(OBJS)
+	@ $(CC) $(CFLAGS) -I $(INCLUDE) -c $< -o $@
 
 # for Ubuntu
-%.o: %.c $(INCLUDE)
-	@ $(CC) $(CFLAGS) -I $(INCLUDE) -c $< -o $@
+# %.o: %.c $(INCLUDE)
+# 	@ $(CC) $(CFLAGS) -I $(INCLUDE) -c $< -o $@
 
 clean:
 	@ $(RM) $(OBJS)

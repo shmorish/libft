@@ -6,7 +6,7 @@
 /*   By: morishitashoto <morishitashoto@student.    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/05/28 05:23:12 by shmorish          #+#    #+#             */
-/*   Updated: 2023/07/31 17:38:21 by morishitash      ###   ########.fr       */
+/*   Updated: 2023/08/09 17:17:45 by morishitash      ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,7 +16,7 @@ void	ft_putnbr_fd(int n, int fd)
 {
 	char	c;
 
-	if (n == -2147483648)
+	if (n == INT_MIN)
 	{
 		ft_putstr_fd("-2147483648", fd);
 		return ;

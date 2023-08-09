@@ -13,7 +13,7 @@ result.log
 .vscode
 
 ## others
-libft.a
+*.a
 main.c
 a.out
 *.o

@@ -52,6 +52,7 @@ STRING_SRC    = ft_bzero.c \
 				ft_strchr.c \
 				ft_strcmp.c \
 				ft_strdup.c \
+				ft_striteri.c \
 				ft_strjoin.c \
 				ft_strlcat.c \
 				ft_strlcpy.c \
@@ -102,12 +103,12 @@ $(NAME): $(OBJS)
 	@echo "$(CHECK) $(BLUE)Compiling libft...$(RESET)"
 
 # for Mac
-# .c.o: $(OBJS)
-# 	@ $(CC) $(CFLAGS) -I $(INCLUDE) -c $< -o $@
+.c.o: $(OBJS)
+	@ $(CC) $(CFLAGS) -I $(INCLUDE) -c $< -o $@
 
 # for Ubuntu
-%.o: %.c $(INCLUDE)
-	@ $(CC) $(CFLAGS) -I $(INCLUDE) -c $< -o $@
+#  %.o: %.c $(INCLUDE)
+# 	@ $(CC) $(CFLAGS) -I $(INCLUDE) -c $< -o $@
 
 clean:
 	@ make clean -C $(PRINTF_PATH)

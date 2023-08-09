@@ -6,14 +6,13 @@
 /*   By: morishitashoto <morishitashoto@student.    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/07/09 10:09:53 by shmorish          #+#    #+#             */
-/*   Updated: 2023/08/09 16:47:30 by morishitash      ###   ########.fr       */
+/*   Updated: 2023/08/09 17:19:03 by morishitash      ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #ifndef FT_STDLIB_H
 # define FT_STDLIB_H
 
-# include "ft_string.h"
 # include <limits.h>
 # include <stddef.h>
 # include <stdint.h>
