@@ -80,7 +80,11 @@ STRING_SRCS	  = $(addprefix $(STRING_PATH)/, $(STRING_SRC))
 PRINTF_PATH   = stdio/ft_printf
 PRINTF        = libftprintf.a
 
-SRCS          = $(CTYPE_SRCS) $(LIST_SRCS) $(STDIO_SRCS) $(STDLIB_SRCS) $(STRING_SRCS)
+SRCS          = $(CTYPE_SRCS) \
+				$(LIST_SRCS) \
+				$(STDIO_SRCS) \
+				$(STDLIB_SRCS) \
+				$(STRING_SRCS)
 OBJS          = $(SRCS:.c=.o)
 
 CHECK         = \033[32m[✔]\033[0m
