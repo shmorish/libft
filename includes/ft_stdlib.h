@@ -6,7 +6,7 @@
 /*   By: morishitashoto <morishitashoto@student.    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/07/09 10:09:53 by shmorish          #+#    #+#             */
-/*   Updated: 2023/08/09 16:30:46 by morishitash      ###   ########.fr       */
+/*   Updated: 2023/08/09 16:47:30 by morishitash      ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,6 +16,7 @@
 # include "ft_string.h"
 # include <limits.h>
 # include <stddef.h>
+# include <stdint.h>
 # include <stdlib.h>
 
 int			ft_abs(int n);
