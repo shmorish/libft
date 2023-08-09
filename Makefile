@@ -104,6 +104,9 @@ $(NAME): $(OBJS)
 .c.o: $(OBJS)
 	@ $(CC) $(CFLAGS) -I $(INCLUDE) -c $< -o $@
 
+%.o: %.c $(INCLUDE)
+	@ $(CC) $(CFLAGS) -I $(INCLUDE) -c $< -o $@
+
 clean:
 	@ make clean -C $(PRINTF_PATH)
 	@ $(RM) $(OBJS)

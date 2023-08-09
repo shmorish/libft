@@ -3,7 +3,7 @@ NAME = libftprintf.a
 CC = cc
 CFLAGS = -Wall -Wextra -Werror
 
-INCLUDE = './ft_printf.h'
+INCLUDE = 'ft_printf.h'
 
 SRCS = ft_printf.c \
 		ft_format.c \
@@ -31,8 +31,11 @@ $(NAME): $(OBJS)
 .c.o: $(OBJS)
 	@ $(CC) $(CFLAGS) -I $(INCLUDE) -c $< -o $@
 
+%.o: %.c $(INCLUDE)
+	@ $(CC) $(CFLAGS) -I $(INCLUDE) -c $< -o $@
+
 clean:
-	@ $(RM) $(OBJS) $(B_SRCS:.c=.o)
+	@ $(RM) $(OBJS)
 	@echo "$(REMOVE) $(BLUE)Remove ft_printf object files... $(RESET)"
 
 fclean: clean
