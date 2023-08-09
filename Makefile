@@ -101,9 +101,11 @@ $(NAME): $(OBJS)
 	@ ar rc $(NAME) $(OBJS)
 	@echo "$(CHECK) $(BLUE)Compiling libft...$(RESET)"
 
-.c.o: $(OBJS)
-	@ $(CC) $(CFLAGS) -I $(INCLUDE) -c $< -o $@
+# for Mac
+# .c.o: $(OBJS)
+# 	@ $(CC) $(CFLAGS) -I $(INCLUDE) -c $< -o $@
 
+# for Ubuntu
 %.o: %.c $(INCLUDE)
 	@ $(CC) $(CFLAGS) -I $(INCLUDE) -c $< -o $@
 
