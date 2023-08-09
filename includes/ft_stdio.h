@@ -3,26 +3,26 @@
 /*                                                        :::      ::::::::   */
 /*   ft_stdio.h                                         :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: shmorish <shmorish@student.42.fr>          +#+  +:+       +#+        */
+/*   By: morishitashoto <morishitashoto@student.    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/07/09 10:07:11 by shmorish          #+#    #+#             */
-/*   Updated: 2023/07/09 12:00:28 by shmorish         ###   ########.fr       */
+/*   Updated: 2023/08/09 16:45:37 by morishitash      ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #ifndef FT_STDIO_H
 # define FT_STDIO_H
 
-# include <unistd.h>
+# include "../stdio/get_next_line/get_next_line.h"
 # include <stddef.h>
-# include "ft_string.h"
+# include <unistd.h>
 
-void		ft_putchar_fd(char c, int fd);
-void		ft_putstr_fd(const char *s, int fd);
-void		ft_putendl_fd(const char *s, int fd);
-void		ft_putnbr_fd(int n, int fd);
+void	ft_putchar_fd(char c, int fd);
+void	ft_putstr_fd(const char *s, int fd);
+void	ft_putendl_fd(const char *s, int fd);
+void	ft_putnbr_fd(int n, int fd);
 
-char		*get_next_line(int fd);
-int			ft_printf(const char *format, ...);
+char	*get_next_line(int fd);
+int		ft_printf(const char *format, ...);
 
 #endif

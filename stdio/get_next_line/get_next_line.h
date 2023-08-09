@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   get_next_line.h                                    :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: shmorish <shmorish@student.42.fr>          +#+  +:+       +#+        */
+/*   By: morishitashoto <morishitashoto@student.    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/06/11 00:05:03 by morishitash       #+#    #+#             */
-/*   Updated: 2023/07/09 10:50:47 by shmorish         ###   ########.fr       */
+/*   Created: 2023/06/11 00:05:03 by shmorish          #+#    #+#             */
+/*   Updated: 2023/08/09 16:44:49 by morishitash      ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,6 +15,10 @@
 
 # ifndef BUFFER_SIZE
 #  define BUFFER_SIZE 10
+# endif
+
+# ifndef OPEN_MAX
+#  define OPEN_MAX 256
 # endif
 
 # include <unistd.h>
