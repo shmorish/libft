@@ -1,8 +1,9 @@
 NAME = libftprintf.a
 
+CC = cc
 CFLAGS = -Wall -Wextra -Werror
 
-INCLUDE = 'ft_printf.h'
+INCLUDE = './ft_printf.h'
 
 SRCS = ft_printf.c \
 		ft_format.c \
