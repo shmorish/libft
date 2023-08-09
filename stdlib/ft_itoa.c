@@ -6,18 +6,11 @@
 /*   By: morishitashoto <morishitashoto@student.    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/05/28 01:02:30 by shmorish          #+#    #+#             */
-/*   Updated: 2023/07/31 17:38:57 by morishitash      ###   ########.fr       */
+/*   Updated: 2023/08/09 16:30:32 by morishitash      ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../includes/ft_stdlib.h"
-
-static int	ft_abs(int n)
-{
-	if (n < 0)
-		return (n * -1);
-	return (n);
-}
 
 static int	count_digits(int num)
 {

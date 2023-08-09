@@ -33,7 +33,8 @@ STDIO_SRC     = ft_putchar_fd.c \
 				get_next_line/get_next_line.c \
 				get_next_line/get_next_line_utils.c
 				  
-STDLIB_SRC    = ft_atoi.c \
+STDLIB_SRC    = ft_abs.c \
+				ft_atoi.c \
 				ft_atol.c \
 				ft_atoll.c \
 				ft_calloc.c \
