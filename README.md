@@ -1,4 +1,4 @@
-# libft
+# Libft
 
 ## Files
 
