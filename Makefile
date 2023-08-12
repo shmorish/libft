@@ -14,7 +14,8 @@ CTYPE_SRC     = ft_isalnum.c \
 				ft_tolower.c \
 				ft_toupper.c \
 				ft_isdouble.c \
-				ft_isint.c
+				ft_isint.c \
+				ft_isstrspace.c \
 
 LIST_SRC      = ft_lstadd_back.c \
 				ft_lstadd_front.c \
