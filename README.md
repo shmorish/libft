@@ -126,3 +126,7 @@ To use the library functions in your code, simply include its header:
 ```C
 #include "libft.h"
 ```
+You can use these functions by compiling your file and the archive file libft.a together.
+```shell
+$ cc your_file.c libft.a
+```
