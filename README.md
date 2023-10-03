@@ -67,7 +67,7 @@
 |[`ft_strjoin`](ft_strjoin.c)|concatenate two strings into a new string (with malloc).|
 |[`ft_split`](ft_split.c)|split string, with specified character as delimiter, into an array of strings.|
 |[`ft_strmapi`](ft_strmapi.c)|create new string from modifying string with specified function.|
-|[`ft_striteri`](ft_striteri.c)|Applies the function ’f’ on each character of the string passed as argument, passing its index as first argument.|
+|[`ft_striteri`](ft_striteri.c)|apply a certain function to each character in a string|
 |[`ft_putchar_fd`](ft_putchar_fd.c)|output a character to given file.|
 |[`ft_putstr_fd`](ft_putstr_fd.c)|output string to given file.|
 |[`ft_putendl_fd`](ft_putendl_fd.c)|output string to given file with newline.|
