@@ -1,39 +1,128 @@
-# Libft
+<h1 align="center">
+	Libft
+</h1>
+
+<p align="center">
+	<b><i>YOUR VERY FIRST OWN LIBRARY</i></b><br>
+</p>
+
+---
+
+## About the project
+
+> _This project is about coding a C library._
+> _It will contain a lot of general purpose functions your programs will rely upon._
+
+## List of functions:
+
+### Functions from `<ctype.h>` library
+|`<ctype.h>`||
+| :------------------------: | :------------------------- |
+|[`ft_isascii`](ft_isascii.c)|test for ASCII character.   |
+|[`ft_isalnum`](ft_isalnum.c)|alphanumeric character test.|
+|[`ft_isalpha`](ft_isalpha.c)|alphabetic character test.  |
+|[`ft_isdigit`](ft_isdigit.c)|decimal-digit character test.|
+|[`ft_isprint`](ft_isprint.c)|printing character test (space character inclusive).|
+|[`ft_tolower`](ft_tolower.c)|upper case to lower case letter conversion.|
+|[`ft_toupper`](ft_toupper.c)|lower case to upper case letter conversion.|
+
+### Functions from `<stdlib.h>` library
+
+|`<stdlib.h>`||
+| :------------------------: | :------------------------- |
+|[`ft_itoa`](ft_itoa.c)|convert integer to ASCII string.|
+|[`ft_calloc`](ft_calloc.c)|memory allocation.|
+
+### Functions from `<strings.h>` library
+
+|`<strings.h>`||
+| :------------------------: | :------------------------- |
+|[`ft_bzero`](ft_bzero.c)|write zeroes to a byte string.|
+|[`ft_memchr`](ft_memchr.c)|locate byte in byte string.|
+|[`ft_memcmp`](ft_memcmp.c)|compare byte string.|
+|[`ft_memcpy`](ft_memcpy.c)|copy memory area.|
+|[`ft_memmove`](ft_memmove.c)|copy byte string.|
+|[`ft_memset`](ft_memset.c)|write a byte to a byte string.|
+
+### Functions from `<string.h>` library
+
+|`<string.h>`||
+| :------------------------: | :------------------------- |
+|[`ft_strchr`](ft_strchr.c)|locate character in string.|
+|[`ft_strlcat`](ft_strlcat.c)|size-bounded string concatenation.|
+|[`ft_strlcpy`](ft_strlcpy.c)|size-bounded string copying.|
+|[`ft_strlen`](ft_strlen.c)|find length of string.|
+|[`ft_strncmp`](ft_strncmp.c)|compare strings (size-bounded).|
+|[`ft_strnstr`](ft_strnstr.c)|locate a substring in a string (size-bounded).|
+|[`ft_strrchr`](ft_strrchr.c)|locate character in string (last occurence).|
+|[`ft_strdup`](ft_strdup.c)|save a copy of a string (with malloc).|
+
+### Non-standard functions
+
+|Function||
+| :------------------------: | :------------------------- |
+|[`ft_itoa`](ft_itoa.c)|convert integer to ASCII string.|
+|[`ft_substr`](ft_substr.c)|extract substring from string.|
+|[`ft_strtrim`](ft_strtrim.c)|trim beginning and end of string with the specified characters.|
+|[`ft_strjoin`](ft_strjoin.c)|concatenate two strings into a new string (with malloc).|
+|[`ft_split`](ft_split.c)|split string, with specified character as delimiter, into an array of strings.|
+|[`ft_strmapi`](ft_strmapi.c)|create new string from modifying string with specified function.|
+|[`ft_striteri`](ft_striteri.c)|Applies the function ’f’ on each character of the string passed as argument, passing its index as first argument.|
+|[`ft_putchar_fd`](ft_putchar_fd.c)|output a character to given file.|
+|[`ft_putstr_fd`](ft_putstr_fd.c)|output string to given file.|
+|[`ft_putendl_fd`](ft_putendl_fd.c)|output string to given file with newline.|
+|[`ft_putnbr_fd`](ft_putnbr_fd.c)|output integer to given file.|
+
+### Linked list functions (bonus)
+
+|Function||
+| :------------------------: | :------------------------- |
+|[`ft_lstnew`](ft_lstnew_bonus.c)|create new list.|
+|[`ft_lstsize`](ft_lstsize_bonus.c)|count elements of a list.|
+|[`ft_lstlast`](ft_lstlast_bonus.c)|find last element of list.|
+|[`ft_lstadd_back`](ft_lstadd_back_bonus.c)|add new element at end of list.|
+|[`ft_lstadd_front`](ft_lstadd_front_bonus.c)|add new element at beginning of list.|
+|[`ft_lstdelone`](ft_lstdelone_bonus.c)|delete element from list.|
+|[`ft_lstclear`](ft_lstclear_bonus.c)|delete sequence of elements of list from a starting point.|
+|[`ft_lstiter`](ft_lstiter_bonus.c)|apply function to content of all list's elements.|
+|[`ft_lstmap`](ft_lstmap_bonus.c)|apply function to content of all list's elements into new list.|
+
 ## Usage
 
-``make`` without bonus functions.
+### Requirements
 
-``make bonus`` to compile with bonuses.
+The library is written in C language and needs the **`cc` compiler** and some standard **C libraries** to run.
 
-## Files
+### Instructions
 
-### Makefile
-- [Makefile](https://github.com/Mori062/libft/blob/master/Makefile)
+**1. Compiling the library**
 
-### Source Code
-| No  | Libc Functions                                                                 |   | No  | Additional Functions                                                                 |   | No  | Bonus Functions                                                                          |
-| :-: | :----------------------------------------------------------------------------- | - | :-: | :----------------------------------------------------------------------------------- | - | :-: | :--------------------------------------------------------------------------------------- |
-| 1   | [ft_memset](https://github.com/Mori062/libft/blob/master/ft_memset.c)   |   | 1   | [ft_substr](https://github.com/Mori062/libft/blob/master/ft_substr.c)         |   | 1   | [ft_lstnew](https://github.com/Mori062/libft/blob/master/ft_lstnew_bonus.c)             |
-| 2   | [ft_bzero](https://github.com/Mori062/libft/blob/master/ft_bzero.c)     |   | 2   | [ft_strjoin](https://github.com/Mori062/libft/blob/master/ft_strjoin.c)       |   | 2   | [ft_lstadd_front](https://github.com/Mori062/libft/blob/master/ft_lstadd_front_bonus.c) |
-| 3   | [ft_memcpy](https://github.com/Mori062/libft/blob/master/ft_memcpy.c)   |   | 3   | [ft_strtrim](https://github.com/Mori062/libft/blob/master/ft_strtrim.c)       |   | 3   | [ft_lstsize](https://github.com/Mori062/libft/blob/master/ft_lstsize_bonus.c)           |
-| 4   | [ft_memccpy](https://github.com/Mori062/libft/blob/master/ft_memccpy.c) |   | 4   | [ft_split](https://github.com/Mori062/libft/blob/master/ft_split.c)           |   | 4   | [ft_lstlast](https://github.com/Mori062/libft/blob/master/ft_lstlast_bonus.c)           |
-| 5   | [ft_memmove](https://github.com/Mori062/libft/blob/master/ft_memmove.c) |   | 5   | [ft_itoa](https://github.com/Mori062/libft/blob/master/ft_itoa.c)             |   | 5   | [ft_lstadd_back](https://github.com/Mori062/libft/blob/master/ft_lstadd_back_bonus.c)   |
-| 6   | [ft_memchr](https://github.com/Mori062/libft/blob/master/ft_memchr.c)   |   | 6   | [ft_strmapi](https://github.com/Mori062/libft/blob/master/ft_strmapi.c)       |   | 6   | [ft_lstdelone](https://github.com/Mori062/libft/blob/master/ft_lstdelone_bonus.c)       |
-| 7   | [ft_memcmp](https://github.com/Mori062/libft/blob/master/ft_memcmp.c)   |   | 7   | [ft_putchar_fd](https://github.com/Mori062/libft/blob/master/ft_putchar_fd.c) |   | 7   | [ft_lstclear](https://github.com/Mori062/libft/blob/master/ft_lstclear_bonus.c)         |
-| 8   | [ft_strlen](https://github.com/Mori062/libft/blob/master/ft_strlen.c)   |   | 8   | [ft_putstr_fd](https://github.com/Mori062/libft/blob/master/ft_putstr_fd.c)   |   | 8   | [ft_lstiter](https://github.com/Mori062/libft/blob/master/ft_lstiter_bonus.c)           |
-| 9   | [ft_strlcpy](https://github.com/Mori062/libft/blob/master/ft_strlcpy.c) |   | 9   | [ft_putendl_fd](https://github.com/Mori062/libft/blob/master/ft_putendl_fd.c) |   | 9   | [ft_lstmap](https://github.com/Mori062/libft/blob/master/ft_lstmap_bonus.c)             |
-| 10  | [ft_strlcat](https://github.com/Mori062/libft/blob/master/ft_strlcat.c) |   | 10  | [ft_putnbr_fd](https://github.com/Mori062/libft/blob/master/ft_putnbr_fd.c)   |   |     |                                                                                          |
-| 11  | [ft_strchr](https://github.com/Mori062/libft/blob/master/ft_strchr.c)   |   |     |                                                                                      |   |     |                                                                                          |
-| 12  | [ft_strrchr](https://github.com/Mori062/libft/blob/master/ft_strrchr.c) |   |     |                                                                                      |   |     |                                                                                          |
-| 13  | [ft_strnstr](https://github.com/Mori062/libft/blob/master/ft_strnstr.c) |   |     |                                                                                      |   |     |                                                                                          |
-| 14  | [ft_strncmp](https://github.com/Mori062/libft/blob/master/ft_strncmp.c) |   |     |                                                                                      |   |     |                                                                                          |
-| 15  | [ft_atoi](https://github.com/Mori062/libft/blob/master/ft_atoi.c)       |   |     |                                                                                      |   |     |                                                                                          |
-| 16  | [ft_isalpha](https://github.com/Mori062/libft/blob/master/ft_isalpha.c) |   |     |                                                                                      |   |     |                                                                                          |
-| 17  | [ft_isdigit](https://github.com/Mori062/libft/blob/master/ft_isdigit.c) |   |     |                                                                                      |   |     |                                                                                          |
-| 18  | [ft_isalnum](https://github.com/Mori062/libft/blob/master/ft_isalnum.c) |   |     |                                                                                      |   |     |                                                                                          |
-| 19  | [ft_isascii](https://github.com/Mori062/libft/blob/master/ft_isascii.c) |   |     |                                                                                      |   |     |                                                                                          |
-| 20  | [ft_isprint](https://github.com/Mori062/libft/blob/master/ft_isprint.c) |   |     |                                                                                      |   |     |                                                                                          |
-| 21  | [ft_toupper](https://github.com/Mori062/libft/blob/master/ft_toupper.c) |   |     |                                                                                      |   |     |                                                                                          |
-| 22  | [ft_tolower](https://github.com/Mori062/libft/blob/master/ft_tolower.c) |   |     |                                                                                      |   |     |                                                                                          |
-| 23  | [ft_calloc](https://github.com/Mori062/libft/blob/master/ft_calloc.c)   |   |     |                                                                                      |   |     |                                                                                          |
-| 24  | [ft_strdup](https://github.com/Mori062/libft/blob/master/ft_strdup.c)   |   |     |                                                                                      |   |     |                                                                                          |
+To compile the library, go to its path and run:
+
+For all mandatory functions:
+
+```shell
+$ make
+```
+
+For bonus functions:
+
+```shell
+$ make bonus
+```
+
+**2. Cleaning all binary (.o) and executable files (.a)**
+
+To clean all files generated while doing a make, go to the path and run:
+
+```shell
+$ make fclean
+```
+
+**3. Using it in your code**
+
+To use the library functions in your code, simply include its header:
+
+```C
+#include "libft.h"
+```
