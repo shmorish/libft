@@ -1,30 +1,31 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_putstr.c                                        :+:      :+:    :+:   */
+/*   ft_strndup.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: morishitashoto <morishitashoto@student.    +#+  +:+       +#+        */
+/*   By: shmorish <shmorish@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/06/08 10:26:28 by morishitash       #+#    #+#             */
-/*   Updated: 2023/06/10 23:56:27 by morishitash      ###   ########.fr       */
+/*   Created: 2024/02/26 09:45:15 by shmorish          #+#    #+#             */
+/*   Updated: 2024/02/26 09:46:38 by shmorish         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "ft_printf.h"
+#include "../includes/ft_string.h"
 
-static int	ft_strlen(const char *s)
+char	*ft_strndup(const char *s1, size_t n)
 {
-	int	i;
+	char	*ret;
+	size_t	i;
 
 	i = 0;
-	while (s[i] != '\0')
+	ret = (char *)malloc(sizeof(char) * (n + 1));
+	if (!ret)
+		return (NULL);
+	while (s1[i] != '\0' && i < n)
+	{
+		ret[i] = s1[i];
 		i++;
-	return (i);
-}
-
-int	ft_putstr(char *s)
-{
-	if (s == NULL)
-		return (write(STDOUT_FILENO, "(null)", 6));
-	return (write(STDOUT_FILENO, s, ft_strlen(s)));
+	}
+	ret[i] = '\0';
+	return (ret);
 }

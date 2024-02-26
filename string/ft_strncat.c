@@ -1,18 +1,29 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_isspace.c                                       :+:      :+:    :+:   */
+/*   ft_strncat.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: shmorish <shmorish@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/07/12 14:25:57 by morishitash       #+#    #+#             */
-/*   Updated: 2024/02/26 10:13:42 by shmorish         ###   ########.fr       */
+/*   Created: 2024/02/26 09:48:21 by shmorish          #+#    #+#             */
+/*   Updated: 2024/02/26 09:50:43 by shmorish         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "../includes/ft_ctype.h"
+#include "../includes/ft_string.h"
 
-int	ft_isspace(int c)
+char	*ft_strncat(char *dest, const char *src, size_t n)
 {
-	return (ft_isblank(c) || (10 <= c && c <= 13));
+	size_t	i;
+	size_t	dest_len;
+
+	i = 0;
+	dest_len = ft_strlen(dest);
+	while (src[i] != '\0' && i < n)
+	{
+		dest[dest_len + i] = src[i];
+		i++;
+	}
+	dest[dest_len + i] = '\0';
+	return (dest);
 }
