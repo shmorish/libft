@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_vdprintf.c                                      :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: shmorish <shmorish@student.42.fr>          +#+  +:+       +#+        */
+/*   By: morishitashoto <morishitashoto@student.    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/02/02 00:07:39 by shmorish          #+#    #+#             */
-/*   Updated: 2024/02/26 03:20:25 by shmorish         ###   ########.fr       */
+/*   Updated: 2024/02/26 14:53:08 by morishitash      ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -64,9 +64,6 @@ static int	ft_putptr(void *ptr, int fd)
 
 static int	sort_format(int fd, va_list args, const char format)
 {
-	int	count;
-
-	count = 0;
 	if (format == 'c')
 		return (ft_putchar_fd(va_arg(args, int), fd));
 	else if (format == 's')
