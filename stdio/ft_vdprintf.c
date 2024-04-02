@@ -25,7 +25,7 @@ int	ft_vdprintf(int fd, const char *format, va_list args)
 	{
 		if (format[i] != '%')
 		{
-			ft_putchar_fd(fd, format[i++]);
+			ft_putchar_fd(format[i++], fd);
 			count++;
 		}
 		else
