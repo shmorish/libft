@@ -56,7 +56,7 @@ static int	determine_base(char **str, int base)
 	return (base);
 }
 
-long	char_to_digit(char c)
+static long	char_to_digit(char c)
 {
 	if (c >= '0' && c <= '9')
 		return (c - '0');
@@ -67,7 +67,7 @@ long	char_to_digit(char c)
 	return (-1);
 }
 
-long	add_digit_to_result(long result, long digit, int base, long sign)
+static long	add_digit_to_result(long result, long digit, int base, long sign)
 {
 	if (result > (LONG_MAX - digit) / base)
 	{
