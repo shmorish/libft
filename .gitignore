@@ -17,4 +17,5 @@ result.log
 main.c
 a.out
 *.o
+*.d
 *.swp
