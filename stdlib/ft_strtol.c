@@ -11,39 +11,95 @@
 /* ************************************************************************** */
 
 #include "../includes/ft_ctype.h"
+#include <limits.h>
+#include <ctype.h>
 
-static long	isoverflow(long n, int d, int sign)
+long	check_sign(char **str)
 {
-	if (n * sign > LONG_MAX / 10 || (n * sign == LONG_MAX / 10 && d > LONG_MAX
-			% 10))
-		return (1);
-	if (n * sign < LONG_MIN / 10 || (n * sign == LONG_MIN / 10 && d > -1
-			* (LONG_MIN % 10)))
-		return (-1);
-	return (0);
+	long	sign;
+
+	sign = 1;
+	if (**str == '-' || **str == '+')
+	{
+		if (**str == '-')
+			sign = -1;
+		(*str)++;
+	}
+	return (sign);
 }
 
-long	ft_strtol(const char *str)
+int	determine_base(char **str, int base)
 {
-	long	n;
-	int		sign;
+	if (base == 0)
+	{
+		if (**str == '0')
+		{
+			if (*(*str + 1) == 'x' || *(*str + 1) == 'X')
+			{
+				base = 16;
+				*str += 2;
+			}
+			else
+			{
+				base = 8;
+				(*str)++;
+			}
+		}
+		else
+			base = 10;
+	}
+	else if (base == 16 && **str == '0' && \
+		(*(*str + 1) == 'x' || *(*str + 1) == 'X'))
+	{
+		*str += 2;
+	}
+	return (base);
+}
 
+long	char_to_digit(char c)
+{
+	if (c >= '0' && c <= '9')
+		return (c - '0');
+	else if (c >= 'a' && c <= 'z')
+		return (c - 'a' + 10);
+	else if (c >= 'A' && c <= 'Z')
+		return (c - 'A' + 10);
+	return (-1);
+}
+
+long	add_digit_to_result(long result, long digit, int base, long sign)
+{
+	if (result > (LONG_MAX - digit) / base)
+	{
+		if (sign == 1)
+			return (LONG_MAX);
+		else
+			return (LONG_MIN);
+	}
+	return (result * base + digit);
+}
+
+long	ft_strtol(char *str, char **endptr, int base)
+{
+	long	result;
+	long	sign;
+	long	digit;
+
+	result = 0;
 	while (ft_isspace(*str))
 		str++;
-	sign = 1;
-	if (*str == '-')
-		sign *= -1;
-	if (*str == '-' || *str == '+')
-		str++;
-	n = 0;
-	while (ft_isdigit(*str))
+	sign = check_sign(&str);
+	base = determine_base(&str, base);
+	while (ft_isdigit(*str) || \
+		(*str >= 'a' && *str <= 'z') || (*str >= 'A' && *str <= 'Z'))
 	{
-		if (isoverflow(n, *str - '0', sign) == 1)
-			return (LONG_MAX);
-		else if (isoverflow(n, *str - '0', sign) == -1)
-			return (LONG_MIN);
-		n = (n * 10) + (*str - '0');
+		digit = char_to_digit(*str);
+		if (digit < 0 || digit >= base)
+			break ;
+		result = add_digit_to_result(result, digit, base, sign);
 		str++;
 	}
-	return (n * sign);
+	if (endptr)
+		*endptr = (char *)str;
+	return (result * sign);
 }

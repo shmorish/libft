@@ -14,5 +14,5 @@
 
 int	ft_atoi(const char *str)
 {
-	return ((int)ft_strtol(str));
+	return ((int)ft_strtol((char *)str, NULL, 10));
 }

@@ -27,6 +27,6 @@ long long	ft_atoll(const char *str);
 void		*ft_calloc(size_t count, size_t size);
 void		*xmalloc(size_t size);
 char		*ft_itoa(int n);
-long		ft_strtol(const char *str);
+long		ft_strtol(char *str, char **endptr, int base);
 
 #endif

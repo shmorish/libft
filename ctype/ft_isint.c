@@ -32,7 +32,7 @@ int	ft_isint(char *str)
 			return (0);
 		i++;
 	}
-	num = ft_strtol(str);
+	num = ft_strtol(str, NULL, 10);
 	if (num < INT_MIN || INT_MAX < num)
 		return (0);
 	return (1);
