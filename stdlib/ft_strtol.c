@@ -14,7 +14,7 @@
 #include <limits.h>
 #include <ctype.h>
 
-long	check_sign(char **str)
+static long	check_sign(char **str)
 {
 	long	sign;
 
@@ -28,7 +28,7 @@ long	check_sign(char **str)
 	return (sign);
 }
 
-int	determine_base(char **str, int base)
+static int	determine_base(char **str, int base)
 {
 	if (base == 0)
 	{
