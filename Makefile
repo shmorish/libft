@@ -4,54 +4,31 @@ CC            = cc
 CFLAGS        = -Wall -Wextra -Werror
 DEPFLAGS      = -MMD -MP
 
-INCLUDE       = ./includes
+INC_DIR       = ./incs
 
-SRCS          = $(shell find . -name "*.c")
-OBJ           = $(SRCS:.c=.o)
-OBJS          = $(addprefix objs/,$(OBJ))
-DEP           = $(OBJ:.o=.d)
-DEPS          = $(addprefix deps/,$(DEP))
-
-CHECK         = \033[32m[✔]\033[0m
-REMOVE        = \033[31m[✘]\033[0m
-GENERATE      = \033[33m[➤]\033[0m
-BLUE          = \033[1;34m
-YELLOW        = \033[1;33m
-RESET         = \033[0m
-
-TOTAL_FILES   := $(shell echo $(words $(SRCS)))
-CURRENT_FILE  = 1
-
-define progress
-	@printf "$(GENERATE) $(YELLOW)Libft obj file gen Progress: %3d%% (%d/%d)$(RESET)\r" $$(($(CURRENT_FILE)*100/$(TOTAL_FILES))) $(CURRENT_FILE) $(TOTAL_FILES)
-	@$(eval CURRENT_FILE=$(shell echo $$(($(CURRENT_FILE)+1))))
-	@if [ $(CURRENT_FILE) -gt $(TOTAL_FILES) ]; then \
-		printf "$(GENERATE) $(YELLOW)Finish Generating LIBFT Object files !%-50.50s\n$(RESET)"; \
-	fi
-endef
+# SRCS          = $(shell find ./srcs -name "*.c")
+SRCS          = ./srcs/ctype/ft_isnumber.c ./srcs/ctype/ft_isdigit.c ./srcs/ctype/ft_isblank.c ./srcs/ctype/ft_isascii.c ./srcs/ctype/ft_isprint.c ./srcs/ctype/ft_isdouble.c ./srcs/ctype/ft_toupper.c ./srcs/ctype/ft_isalpha.c ./srcs/ctype/ft_islower.c ./srcs/ctype/ft_isupper.c ./srcs/ctype/ft_isstrspace.c ./srcs/ctype/ft_isint.c ./srcs/ctype/ft_isalnum.c ./srcs/ctype/ft_isspace.c ./srcs/ctype/ft_tolower.c ./srcs/stdio/ft_vdprintf.c ./srcs/stdio/ft_putstr_fd.c ./srcs/stdio/ft_putnbr_fd.c ./srcs/stdio/ft_printf.c ./srcs/stdio/get_next_line.c ./srcs/stdio/ft_putendl_fd.c ./srcs/stdio/ft_putchar_fd.c ./srcs/list/ft_lstadd_back.c ./srcs/list/ft_lstnew.c ./srcs/list/ft_lstlast.c ./srcs/list/ft_lstclear.c ./srcs/list/ft_lstiter.c ./srcs/list/ft_lstmap.c ./srcs/list/ft_lstsize.c ./srcs/list/ft_lstadd_front.c ./srcs/list/ft_lstdelone.c ./srcs/stdlib/ft_strtol.c ./srcs/stdlib/ft_atol.c ./srcs/stdlib/ft_atof.c ./srcs/stdlib/ft_atoll.c ./srcs/stdlib/ft_abs.c ./srcs/stdlib/ft_calloc.c ./srcs/stdlib/ft_atoi.c ./srcs/stdlib/ft_itoa.c ./srcs/string/ft_strncat.c ./srcs/string/ft_strnstr.c ./srcs/string/ft_strlcpy.c ./srcs/string/ft_strlen.c ./srcs/string/ft_memcmp.c ./srcs/string/ft_strchr.c ./srcs/string/ft_striteri.c ./srcs/string/ft_bzero.c ./srcs/string/ft_strjoin.c ./srcs/string/ft_memcpy.c ./srcs/string/ft_strstr.c ./srcs/string/ft_strcat.c ./srcs/string/ft_split.c ./srcs/string/ft_strrchr.c ./srcs/string/ft_memchr.c ./srcs/string/ft_memset.c ./srcs/string/ft_substr.c ./srcs/string/ft_strncmp.c ./srcs/string/ft_strcpy.c ./srcs/string/ft_strmapi.c ./srcs/string/ft_strtrim.c ./srcs/string/ft_strndup.c ./srcs/string/ft_memmove.c ./srcs/string/ft_strlcat.c ./srcs/string/ft_strdup.c ./srcs/string/ft_strncpy.c ./srcs/string/ft_strcmp.c 
+OBJS          = $(SRCS:./srcs/%.c=objs/%.o)
+DEPS          = $(SRCS:./srcs/%.c=deps/%.d)
 
 all: $(NAME)
 
 $(NAME): $(OBJS)
-	@ ar rc $(NAME) $(OBJS)
-	@ ranlib $(NAME)
-	@ printf "$(CHECK) $(BLUE)Compiling libft...%-50.50s\n$(RESET)"
+	ar rc $(NAME) $(OBJS)
+	ranlib $(NAME)
 
--include $(DEPS_DIRS)
+-include $(DEPS)
 
-objs/%.o: %.c
-	@ mkdir -p $(dir $@)
-	@ mkdir -p deps/$(dir $*)
-	@ $(CC) $(CFLAGS) $(DEPFLAGS) -I $(INCLUDE) -c $< -o $@ -MF deps/$*.d
-	$(call progress)
+objs/%.o: ./srcs/%.c
+	@mkdir -p $(dir $@)
+	@mkdir -p deps/$(dir $*)
+	$(CC) $(CFLAGS) $(DEPFLAGS) -I $(INC_DIR) -c $< -o $@ -MF deps/$*.d
 
 clean:
-	@ $(RM) -r objs deps
-	@echo "$(REMOVE) $(BLUE)Remove libft object and dependency files. $(RESET)"
+	$(RM) -r objs deps
 
 fclean:
-	@ $(RM) -r $(NAME) objs deps
-	@echo "$(REMOVE) $(BLUE)Remove libft object files, dependency files, and $(NAME). $(RESET)"
+	$(RM) -r $(NAME) objs deps
 
 re: fclean all
 
