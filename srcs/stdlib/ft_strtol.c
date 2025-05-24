@@ -13,6 +13,8 @@
 #include "ft_ctype.h"
 #include <limits.h>
 #include <ctype.h>
+#include <errno.h>
+#include "ft_string.h"
 
 static long	check_sign(char **str)
 {
@@ -32,26 +34,24 @@ static int	determine_base(char **str, int base)
 {
 	if (base == 0)
 	{
-		if (**str == '0')
+		if (!ft_strncmp(*str, "0x", 2) || !ft_strncmp(*str, "0X", 2))
 		{
-			if (*(*str + 1) == 'x' || *(*str + 1) == 'X')
-			{
-				base = 16;
-				*str += 2;
-			}
-			else
-			{
-				base = 8;
-				(*str)++;
-			}
+			base = 16;
+			*str += 2;
 		}
+		else if (**str == '0')
+			base = 8;
 		else
 			base = 10;
 	}
-	else if (base == 16 && **str == '0' && \
-		(*(*str + 1) == 'x' || *(*str + 1) == 'X'))
+	else if (base == 16)
 	{
-		*str += 2;
+		if (!ft_strncmp(*str, "0x", 2) || !ft_strncmp(*str, "0X", 2))
+			*str += 2;
+	}
+	else if (base == 8 && **str == '0')
+	{
+		(*str)++;
 	}
 	return (base);
 }
@@ -71,6 +71,7 @@ static long	add_digit_to_result(long result, long digit, int base, long sign)
 {
 	if (result > (LONG_MAX - digit) / base)
 	{
+		errno = ERANGE;
 		if (sign == 1)
 			return (LONG_MAX);
 		else
@@ -90,8 +91,7 @@ long	ft_strtol(char *str, char **endptr, int base)
 		str++;
 	sign = check_sign(&str);
 	base = determine_base(&str, base);
-	while (ft_isdigit(*str) || \
-		(*str >= 'a' && *str <= 'z') || (*str >= 'A' && *str <= 'Z'))
+	while (ft_isdigit(*str) || ft_isalpha(*str))
 	{
 		digit = char_to_digit(*str);
 		if (digit < 0 || digit >= base)
